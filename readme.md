@@ -5,6 +5,14 @@ I think this is the first public repository that provides free annex-BUBT, BUBT-
 ## Important Note
 There have an api script that can broke the security system of BUBT. So, I am not sharing some api script with you due to security reason. And I am requesting you not to use any of this provided api for production use. I already give you the API script. So, Host them on your web server and then use them for the production. 
 
+### API Response & Type
+BUBT API:
+
+| Name | Method | Description | Examples |
+| :-- | :-- | :-- | :-- |
+| Student Verify | `GET`| Verify bubt students | [`/global_file/getData.php?id=?&type=?`](https://bubt.edu.bd/global_file/getData.php?id=17181103084&type=stdVerify) |
+| Faculty Verify | `GET`| Verify bubt faculty  | [`/global_file/getData.php?id=?&type=?`](https://bubt.edu.bd/global_file/getData.php?id=18020331033&type=empVerify) |
+
 Abdullah Xayed API: (v1)
 
 | Name | Method | Description | Examples |
