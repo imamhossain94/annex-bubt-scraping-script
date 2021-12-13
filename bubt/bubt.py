@@ -837,20 +837,14 @@ def loginBUBT():
     return response
 
 
-@bubt.route('/bubt/v1/routine', methods=['GET'])
-def routine():
-    std_id = request.args.get('id')
-    data = getRoutine(std_id=std_id)
-    response = jsonify(data)
-    response.headers.add('Access-Control-Allow-Origin', '*')
-    return response
-
-
-@bubt.route('/bubt/v1/<dataType>', methods=['GET'])
+@bubt.route('/bubt/v1/<data_type>', methods=['GET'])
 def dataBUBT(data_type):
     print(request.args)
     data = {}
-    if data_type in ['allNotice', 'noticeDetails', 'allEvent', 'eventDetails', 'getResult']:
+    if data_type in ['allNotice', 'noticeDetails', 'allEvent', 'eventDetails', 'getResult', 'routine']:
+        if data_type == 'routine':
+            std_id = request.args.get('id')
+            data = getRoutine(std_id=std_id)
         if data_type == 'allNotice':
             data = getAllNE(dType='notice')
         elif data_type == 'allEvent':
@@ -872,8 +866,6 @@ def dataBUBT(data_type):
         cookies = {'PHPSESSID': phpsessid}
         if phpsessid is not None:
             if get(url3, cookies=cookies).url == url3:
-                # if dataType == 'routine':
-                #     data = getRoutine(cookies)
                 if data_type == 'fees':
                     data = getFees(cookies)
                 elif data_type == 'prevCourses':

@@ -20,7 +20,7 @@ Abdullah Xayed API: (v1)
 | Annex Login | `GET`| Verify bubt faculty  | [`/bubt/v1/login?id=?&pass=?`](https://bubt.herokuapp.com/bubt/v1/login?id=17181103084&pass=password) |
 | Annex Result | `GET`| Get student result from annex by session id | [`/bubt/v1/prevCourses?phpsessid=?`](https://bubt.herokuapp.com/bubt/v1/prevCourses?phpsessid=7d1755fe6c32b74d321fe3d3ba69a4ad) |
 | Annex Fees | `GET`| Get student fees from annex by session id | [`/bubt/v1/fees?phpsessid=?`](https://bubt.herokuapp.com/bubt/v1/fees?phpsessid=7d1755fe6c32b74d321fe3d3ba69a4ad) |
-| Annex Routine | `GET`| Get student routine  from annex by session id `working, Routine shift from annex to BUBT Soft` | [`/bubt/v1/routine?phpsessid=?`](https://bubt.herokuapp.com/bubt/v1/routine?phpsessid=7d1755fe6c32b74d321fe3d3ba69a4ad) |
+| Annex Routine | `GET`| Get student routine  from annex by session id `working, Routine shift from annex to BUBT Soft` | [`/bubt/v1/routine?id=?`](https://bubt.herokuapp.com/bubt/v1/routine?id=17181103084) |
 | All Events | `GET`| Get all events from bubt website | [`/bubt/v1/allEvent?`](https://bubt.herokuapp.com/bubt/v1/allEvent?) |
 | Events Details | `GET`| Get an event details by events url | [`/bubt/v1/eventDetails?url=?`](https://bubt.herokuapp.com/bubt/v1/eventDetails?url=https://www.bubt.edu.bd/home/event_details/200) |
 | All Notice | `GET`| Get all notices from bubt website | [`/bubt/v1/allNotice?`](https://bubt.herokuapp.com/bubt/v1/allEvent?) |
